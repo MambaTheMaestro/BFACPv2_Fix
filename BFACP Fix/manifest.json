@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "BFACP Fix",
+  "description": "Overrides Partial Code for BFACP",
+  "version": "1.0",
+  "action": {
+    "default_icon": "bz_dark.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+   {
+     "matches": ["*://hostname/chatlogs*", "*://hostname/players*", "*://hostname/admin*"],
+	 "css": ["style.css"],
+     "js": ["background.js"],
+	 "run_at": "document_end"
+   }
+   ]
+}
